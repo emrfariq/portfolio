@@ -15,7 +15,7 @@
 * **Implementation Rules:**
   * Embed file `retroTV.html` menggunakan tag `<iframe>` (atau ubah struktur HTML/JS di dalamnya menjadi komponen React) di dalam kontainer dengan dimensi tetap (misalnya, `h-screen w-full`).
   * Jika menggunakan iframe, tampilkan custom loader (misalnya, teks berkedip "[Tuning Retro TV...]") sebagai fallback atau overlay sementara elemen HTML/3D di dalam iframe sedang dimuat.
-  * Pastikan kanvas 3D / iframe ditempatkan di belakang tipografi utama "BE YOURSELF" menggunakan absolute positioning dan `z-index`, tetapi atur agar `pointer-events` tetap bisa menembus (pass through) ke model 3D sehingga pengguna tetap dapat berinteraksi dengan TV retro tersebut.
+  * Pastikan kanvas 3D / iframe ditempatkan di belakang tipografi utama "MER'S PORTFOLIO" menggunakan absolute positioning dan `z-index`, tetapi atur agar `pointer-events` tetap bisa menembus (pass through) ke model 3D sehingga pengguna tetap dapat berinteraksi dengan TV retro tersebut.
 
 ### B. Project Cards (`ProjectShowcase.tsx`)
 * Build a reusable `TicketCard` component.

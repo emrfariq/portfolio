@@ -56,62 +56,78 @@ export default function HeroSection() {
         </p>
       </motion.div>
 
-      {/* BE YOURSELF — Glitch Typography */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, delay: 0.3, type: 'spring', stiffness: 100 }}
-        className="relative w-full select-none flex flex-col items-center justify-center z-10"
-      >
-        <h1 className="font-display-xl text-display-xl lg:text-[148px] lg:leading-[120px] text-brutal-black tracking-tighter uppercase relative inline-block mx-auto z-30">
-          <span
-            aria-hidden="true"
-            className="absolute top-1.5 left-2 text-cyber-cyan opacity-80 mix-blend-multiply select-none animate-glitch-1"
-          >
-            BE YOURSELF
-          </span>
-          <span
-            aria-hidden="true"
-            className="absolute -top-1.5 -left-2 text-bubblegum-pink opacity-80 mix-blend-screen select-none animate-glitch-2"
-          >
-            BE YOURSELF
-          </span>
-          <span className="relative z-10 text-brutal-black drop-shadow-[4px_4px_0px_#FFE600]">
-            BE YOURSELF
-          </span>
-        </h1>
-      </motion.div>
+      {/* MER'S PORTFOLIO & Retro TV Intertwined Layers */}
+      <div className="relative w-full flex items-center justify-center lg:-mt-12">
+        {/* BACK LAYER: Glitch Colors */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.3, type: 'spring', stiffness: 100 }}
+          className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 select-none"
+        >
+          <h1 className="font-display-xl text-display-xl lg:text-[148px] lg:leading-[120px] tracking-tighter uppercase relative inline-block mx-auto whitespace-nowrap">
+            <span
+              aria-hidden="true"
+              className="absolute top-1.5 left-2 text-cyber-cyan opacity-80 mix-blend-multiply animate-glitch-1"
+            >
+              MER'S PORTFOLIO
+            </span>
+            <span
+              aria-hidden="true"
+              className="absolute -top-1.5 -left-2 text-bubblegum-pink opacity-80 mix-blend-screen animate-glitch-2"
+            >
+              MER'S PORTFOLIO
+            </span>
+            {/* Invisible placeholder for sizing */}
+            <span className="text-transparent">MER'S PORTFOLIO</span>
+          </h1>
+        </motion.div>
 
-      {/* 3D Retro TV */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
-        className="w-full relative z-10"
-      >
-        <Suspense
-          fallback={
-            <div className="w-full h-[460px] max-w-[620px] mx-auto flex items-center justify-center bg-brutal-black/5">
-              <div className="flex flex-col items-center gap-space-sm">
-                <div className="font-label-lg text-label-lg text-on-surface-variant animate-pulse tracking-widest">
-                  [Tuning Retro TV...]
-                </div>
-                <div className="flex gap-1">
-                  {[0, 1, 2].map((i) => (
-                    <div
-                      key={i}
-                      className="w-2 h-2 bg-bubblegum-pink animate-bounce"
-                      style={{ animationDelay: `${i * 0.15}s` }}
-                    />
-                  ))}
+        {/* MIDDLE LAYER: 3D Retro TV */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="w-full relative z-10"
+        >
+          <Suspense
+            fallback={
+              <div className="w-full h-[460px] max-w-[620px] mx-auto flex items-center justify-center bg-brutal-black/5">
+                <div className="flex flex-col items-center gap-space-sm">
+                  <div className="font-label-lg text-label-lg text-on-surface-variant animate-pulse tracking-widest">
+                    [Tuning Retro TV...]
+                  </div>
+                  <div className="flex gap-1">
+                    {[0, 1, 2].map((i) => (
+                      <div
+                        key={i}
+                        className="w-2 h-2 bg-bubblegum-pink animate-bounce"
+                        style={{ animationDelay: `${i * 0.15}s` }}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          }
+            }
+          >
+            <RetroTV />
+          </Suspense>
+        </motion.div>
+
+        {/* FRONT LAYER: Black Text with White Stroke */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.3, type: 'spring', stiffness: 100 }}
+          className="absolute inset-0 flex items-center justify-center pointer-events-none z-20 select-none"
         >
-          <RetroTV />
-        </Suspense>
-      </motion.div>
+          <h1 className="font-display-xl text-display-xl lg:text-[148px] lg:leading-[120px] tracking-tighter uppercase relative inline-block mx-auto whitespace-nowrap">
+            <span className="text-brutal-black [-webkit-text-stroke:2px_#F4F0EA] drop-shadow-[4px_4px_0px_#FFE600]">
+              MER'S PORTFOLIO
+            </span>
+          </h1>
+        </motion.div>
+      </div>
 
       {/* CTA Buttons */}
       <motion.div

@@ -191,7 +191,7 @@ Visual hierarchy abandons fuzzy, diffused drop shadows entirely. Depth is achiev
 - **Hard-Drop Shadows:** Surfaces cast solid, unblurred black shadows (`#0E0E12`) offset by `4px 4px`, `6px 6px`, or `10px 10px`. 
 - **Z-Index Architectural Hierarchy:**
   - `z-0`: Ambient background patterns (isometric technical grid paper, noise texture).
-  - `z-10`: Massive hero typography (`"BE YOURSELF"` screen-filler).
+  - `z-10`: Massive hero typography (`"MER'S PORTFOLIO"` screen-filler).
   - `z-20`: Interactive canvas artifacts (floating 3D Retro TV, canvas stickers).
   - `z-30`: Foreground content cards, ticket modules, and marquee ribbons.
   - `z-40`: Persistent HUD overlays (Spinning vinyl Spotify player, status tags).

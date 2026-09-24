@@ -30,7 +30,7 @@ const projects: ProjectData[] = [
     id: 'english-everywhere',
     title: 'ENGLISH EVERYWHERE',
     description: 'Responsive web-based platform designed to present educational content, class schedules, and learning materials through an accessible user interface.',
-    imgSrc: '/projects/english-everywhere.webp', 
+    imgSrc: '/projects/english-everywhere.webp',
     imgAlt: 'English Everywhere Educational Platform',
     release: 'RELEASE: 2024.04',
     releaseBadge: 'FULLSTACK // EDUTECH',
@@ -231,7 +231,7 @@ export default function ProjectShowcase() {
               </span>
             </div>
             <h2 className="font-headline-lg text-headline-lg text-brutal-black uppercase tracking-tight">
-              FEATURED ARCHIVES // SELECT * FROM WORK
+              FEATURED PROJECTS // SELECT * FROM WORK
             </h2>
           </div>
 
@@ -269,7 +269,7 @@ export default function ProjectShowcase() {
           >
             <div className="flex items-center justify-between gap-space-md">
               <span className="font-headline-md text-headline-md uppercase tracking-wide group-hover:translate-x-2 transition-transform">
-                VIEW ALL 24+ PROJECTS &amp; EXPERIMENTS
+                VIEW ALL PROJECTS &amp; EXPERIMENTS
               </span>
               <span className="font-headline-md text-headline-md tracking-widest text-electric-mint group-hover:text-brutal-black">
                 ➔ ➔ ➔

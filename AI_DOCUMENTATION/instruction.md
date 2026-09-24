@@ -1,7 +1,7 @@
 # AI Coding Assistant Instructions: HTML to Next.js Conversion
 
 **Project Context:**
-This project is a personal portfolio for Emir Muhammad Al Fariq, a Fullstack Developer and System Analyst with experience managing digital channels like That One Dude Media. The aesthetic is Maximalist, Brutalist-lite, and Typographic-driven with a Pop/Pastel color palette. The core tagline is "BE YOURSELF".
+This project is a personal portfolio for Emir Muhammad Al Fariq, a Fullstack Developer and System Analyst with experience managing digital channels like That One Dude Media. The aesthetic is Maximalist, Brutalist-lite, and Typographic-driven with a Pop/Pastel color palette. The core tagline is "MER'S PORTFOLIO".
 
 **Primary Objective:**
 Convert the provided static HTML code into a clean, modular, and fully functional Next.js (React) application using Tailwind CSS. Retain the visual layout from the HTML while injecting advanced interactivity.
@@ -15,7 +15,7 @@ Convert the provided static HTML code into a clean, modular, and fully functiona
 
 2.  **Modular Component Structure:**
     Break down the injected HTML body into the following distinct files:
-    *   `components/Hero.jsx`: Must prominently feature the "BE YOURSELF" typography. Ensure the container is ready to accept static image/SVG assets exported from the UI design tool.
+    *   `components/Hero.jsx`: Must prominently feature the "MER'S PORTFOLIO" typography. Ensure the container is ready to accept static image/SVG assets exported from the UI design tool.
     *   `components/Projects.jsx`: Extract the section containing projects. Display exactly 3 featured projects. Structure the HTML of these cards so they resemble vintage movie tickets or concert passes. Provide a button/link to "View All Projects".
     *   `app/page.jsx`: The main landing page that imports and assembles the components.
 

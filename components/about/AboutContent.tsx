@@ -248,9 +248,9 @@ export default function AboutContent() {
                 WHEN THEY CLICK.&quot;
               </h2>
               <div className="space-y-space-md font-body-lg text-body-lg text-brutal-black leading-relaxed">
-                <p>I bridge the friction-filled chasm between bulletproof, high-concurrency backend distributed systems and hyper-expressive, unapologetic Gen-Z frontend web craft.</p>
-                <p>Modern enterprise computing has neutered the web into sanitized grey rectangles and timid design systems. We were promised a neon-soaked virtual frontier; instead, we got endless bland corporate dashboards. I engineer high-velocity software architectures with{' '}
-                  <span className="bg-acid-yellow px-1 font-bold">99.999% SLA reliability</span>, wrapped in an aggressive aesthetic identity that commands attention.
+                <p>I bridge the chasm between bulletproof backend systems and hyper-expressive, unapologetic web craft.</p>
+                <p>I am an Information Systems graduate from Universitas Pembangunan Jaya. I proved my chops by completing my studies in an accelerated{' '}
+                  <span className="bg-acid-yellow px-1 font-bold">3.5 years</span>as a full scholarship awardee with a <span className="bg-acid-yellow px-1 font-bold">3.71 GPA</span> Whether working as a System Analyst or a Fullstack Developer, I refuse to build sanitized grey rectangles. I’m the most laid-back person in the room, but make no mistake, I absolutely murder deadlines and always ship on time.
                 </p>
               </div>
 

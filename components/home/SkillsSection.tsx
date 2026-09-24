@@ -72,7 +72,7 @@ export default function SkillsSection() {
             </span>
           </div>
           <h2 className="font-display-lg text-display-lg-mobile md:text-display-lg text-brutal-black uppercase tracking-tight">
-            TECHNICAL ARSENAL
+            TECHNICAL SKILLS
           </h2>
         </div>
         <p className="font-body-md text-body-md text-on-surface-variant max-w-sm uppercase tracking-wider bg-canvas-cream p-space-sm shadow-[4px_4px_0px_#0E0E12] border-2 border-brutal-black">
@@ -98,11 +98,11 @@ export default function SkillsSection() {
                 {skill.category}
               </h3>
             </div>
-            
+
             <div className="flex flex-wrap gap-2 mt-1">
               {skill.items.map((item, i) => (
-                <span 
-                  key={i} 
+                <span
+                  key={i}
                   className="bg-surface-container border border-brutal-black px-2 py-1 font-label-sm text-label-sm text-brutal-black uppercase shadow-[1px_1px_0px_#0E0E12]"
                 >
                   {item}
