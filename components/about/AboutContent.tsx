@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import SkillsSection from '@/components/home/SkillsSection';
 
 const glitchTicker = [
   '/// SECURITY LEVEL: VIP CLEARANCE 04',
@@ -13,155 +14,104 @@ const glitchTicker = [
 
 const timeline = [
   {
-    period: '2023 — PRESENT [ACTIVE]',
+    period: 'OCT 2025 — JAN 2026 [COMPLETED]',
     periodBg: 'bg-electric-mint',
-    company: 'HYPERCORE LABS',
-    role: 'LEAD SYSTEM ANALYST & FULLSTACK ENGINEER',
+    company: 'PT. INDEKSTAT KONSULTAN INDONESIA',
+    role: 'SYSTEM ANALYST',
     roleColor: 'text-primary',
-    description: 'Spearheading architectural transformations from monolithic web apps to distributed micro-frontend fabrics. Orchestrating event-driven Kafka meshes supporting 400,000+ real-time QPS with zero telemetry blind spots. Engineering proprietary brutalist design token engines deployed across 14 enterprise edge services.',
-    cluster: 'CLUSTER: ASIA-PACIFIC-01',
-    clusterIcon: 'dns',
-    tags: [
-      { text: 'APACHE KAFKA', plain: true },
-      { text: 'RUST / ACTIX', plain: true },
-      { text: 'NEXT.JS 15', plain: true },
-      { text: 'KUBERNETES', plain: true },
-      { text: 'CQRS ENGINES', highlight: 'bg-bubblegum-pink' },
-    ],
-  },
-  {
-    period: '2021 — 2023 [COMPLETED]',
-    periodBg: 'bg-soft-lavender',
-    company: 'FINTECH SCALER',
-    role: 'DISTRIBUTED SYSTEMS DEVELOPER',
-    roleColor: 'text-tertiary',
-    description: 'Designed and scaled sub-millisecond payment ingestion pipelines with double-entry idempotency guarantees. Architected automated zero-downtime Blue/Green rollout controllers on AWS EKS, dropping transactional checkout drop-off rates by 34% across 8 million monthly active consumer wallets.',
-    cluster: 'PIPELINE: PROD-FIN-SEC',
+    description: 'Collaborated in the full development lifecycle of the Tangerang City Investment Potential Map, successfully translating 100% of government requirements into technical specifications for the engineering team. Optimized the front-end architecture for the company website, ensuring 100% mobile responsiveness and improving estimated page load speed. Executed comprehensive system testing (QA) and UI/UX audits, resolving over 40 visual inconsistencies.',
+    cluster: 'SECTOR: GOV-TECH',
     clusterIcon: 'account_tree',
     tags: [
-      { text: 'GO (FIBER)', plain: true },
-      { text: 'POSTGRES HYPERTABLE', plain: true },
-      { text: 'REDIS CLUSTER', plain: true },
-      { text: 'TERRAFORM', plain: true },
-      { text: 'ZERO-LOSS AUDIT', highlight: 'bg-cyber-cyan' },
+      { text: 'SYSTEM ANALYSIS', plain: true },
+      { text: 'QA & AUDIT', plain: true },
+      { text: 'REQUIREMENTS GATHERING', plain: true },
+      { text: '100% MOBILE RESPONSIVE', highlight: 'bg-bubblegum-pink' },
     ],
   },
   {
-    period: '2019 — 2021 [COMPLETED]',
-    periodBg: 'bg-acid-yellow',
-    company: 'STUDIO GLITCH',
-    role: 'CREATIVE FRONTEND ARCHITECT',
-    roleColor: 'text-on-surface-variant',
-    description: 'Constructed award-winning kinetic campaigns, audio-reactive 3D web environments, and bespoke e-commerce experiences for streetwear drops and festival activations. Authored custom fragment shaders and Web Audio DSP synthesizers embedded directly in consumer web browsers.',
-    cluster: 'CANVAS: WEBGL_SHADER_LAB',
-    clusterIcon: 'brush',
+    period: 'JAN 2025 — JUN 2025 [COMPLETED]',
+    periodBg: 'bg-soft-lavender',
+    company: 'PT. JAYA TEKNIK INDONESIA',
+    role: 'SYSTEM ANALYST',
+    roleColor: 'text-tertiary',
+    description: 'Analyzed and mapped over 10 core business processes within the Human Capital division for Odoo ERP implementation. Identified and reported bugs in Odoo 17 modules, contributing to the system go-live. Supported an ERP system optimization projected to reduce manual data entry time for the HR team.',
+    cluster: 'SECTOR: ENTERPRISE ERP',
+    clusterIcon: 'dns',
     tags: [
-      { text: 'THREE.JS', plain: true },
-      { text: 'GLSL SHADERS', plain: true },
-      { text: 'WEB AUDIO API', plain: true },
-      { text: 'TYPESCRIPT', plain: true },
-      { text: 'FWA OF THE DAY x3', highlight: 'bg-acid-yellow' },
+      { text: 'ODOO 17', plain: true },
+      { text: 'BUSINESS PROCESS MAPPING', plain: true },
+      { text: 'ERP IMPLEMENTATION', plain: true },
+      { text: 'HR OPTIMIZATION', highlight: 'bg-cyber-cyan' },
+    ],
+  },
+  {
+    period: 'SEPT 2024 — JAN 2025 [COMPLETED]',
+    periodBg: 'bg-acid-yellow',
+    company: 'BEM UNIVERSITAS PEMBANGUNAN JAYA',
+    role: 'MINISTRY OF RESEARCH, ACTION AND ADVOCACY',
+    roleColor: 'text-on-surface-variant',
+    description: 'Actively participated in organizational leadership, coordinating research initiatives, advocacy programs, and student actions to foster an engaged and critically aware university environment.',
+    cluster: 'SECTOR: ORGANIZATION',
+    clusterIcon: 'groups',
+    tags: [
+      { text: 'LEADERSHIP', plain: true },
+      { text: 'ADVOCACY', plain: true },
+      { text: 'RESEARCH INITIATIVES', plain: true },
+    ],
+  },
+  {
+    period: 'AUG 2022 — FEB 2026 [COMPLETED]',
+    periodBg: 'bg-cyber-cyan',
+    company: 'UNIVERSITAS PEMBANGUNAN JAYA',
+    role: 'BACHELOR OF INFORMATION SYSTEM',
+    roleColor: 'text-primary',
+    description: 'Accelerated 3.5-year degree program as a full scholarship awardee. Serving as a Lecture Assistant for Basic Mathematical Logic and Information System, providing consultation sessions, assisting in grading, and offering constructive feedback to students.',
+    cluster: 'SECTOR: EDUCATION',
+    clusterIcon: 'school',
+    tags: [
+      { text: 'GPA: 3.71 / 4.00', highlight: 'bg-acid-yellow' },
+      { text: 'FULL SCHOLARSHIP', plain: true },
+      { text: 'LECTURE ASSISTANT', plain: true },
     ],
   },
 ];
 
-const techStack = [
-  {
-    id: '01',
-    title: 'BACKEND & DISTRIBUTED',
-    icon: 'terminal',
-    desc: 'Engineered for deterministic throughput, strict idempotency, and concurrent fault tolerance.',
-    footerBg: 'bg-electric-mint',
-    footerLabel: 'TIER: CORE ENGINE',
-    items: [
-      { name: 'Rust / Actix-Web', tag: 'PRIMARY', tagColor: 'text-terminal-dim-green' },
-      { name: 'Go (Fiber / gRPC)', tag: 'HIGH-IO', tagColor: 'text-on-surface-variant' },
-      { name: 'Apache Kafka / Redpanda', tag: '400k QPS', tagColor: 'text-bubblegum-pink' },
-      { name: 'Postgres Hypertable', tag: 'TIME-SERIES', tagColor: 'text-on-surface-variant' },
-      { name: 'Redis Cluster / Dragonfly', tag: 'P99: 0.8ms', tagColor: 'text-terminal-dim-green' },
-    ],
-  },
-  {
-    id: '02',
-    title: 'FRONTEND & CREATIVE',
-    icon: 'palette',
-    desc: 'High-contrast kinetic interfaces, generative graphics, and sub-60fps fluid browser runtimes.',
-    footerBg: 'bg-bubblegum-pink',
-    footerLabel: 'TIER: USER INTERACTION',
-    items: [
-      { name: 'TypeScript / React 19', tag: 'RSC READY', tagColor: 'text-bubblegum-pink' },
-      { name: 'Next.js App Router', tag: 'EDGE SSR', tagColor: 'text-on-surface-variant' },
-      { name: 'Three.js / WebGL / GLSL', tag: 'CUSTOM RAW', tagColor: 'text-cyber-cyan' },
-      { name: 'TailwindCSS / Neo-Brutalist', tag: 'TOKEN ARCH', tagColor: 'text-on-surface-variant' },
-      { name: 'Web Audio API & DSP', tag: 'SYNTHESIS', tagColor: 'text-acid-yellow' },
-    ],
-  },
-  {
-    id: '03',
-    title: 'DEVOPS & CHAOS',
-    icon: 'bolt',
-    desc: 'Reproducible declarative orchestration, automated rollbacks, and proactive observability.',
-    footerBg: 'bg-acid-yellow',
-    footerLabel: 'TIER: RESILIENCE',
-    items: [
-      { name: 'Kubernetes (k8s) & Helm', tag: 'AUTOSCALING', tagColor: 'text-terminal-dim-green' },
-      { name: 'Docker Containers', tag: 'MULTI-ARCH', tagColor: 'text-on-surface-variant' },
-      { name: 'Terraform (IaC)', tag: 'AWS + OCI', tagColor: 'text-on-surface-variant' },
-      { name: 'Prometheus + Grafana', tag: 'OPENMETRICS', tagColor: 'text-acid-yellow' },
-      { name: 'Chaos Mesh / Litmus', tag: 'FAILURE DRILL', tagColor: 'text-error' },
-    ],
-  },
-  {
-    id: '04',
-    title: 'ARCH PARADIGMS',
-    icon: 'hub',
-    desc: 'Conceptual frameworks powering resilient, self-healing system lifecycles.',
-    footerBg: 'bg-soft-lavender',
-    footerLabel: 'TIER: MENTAL MODEL',
-    items: [
-      { name: 'Event-Driven CQRS', tag: 'ASYNC CORE', tagColor: 'text-bubblegum-pink' },
-      { name: 'Domain-Driven (DDD)', tag: 'BOUNDED', tagColor: 'text-on-surface-variant' },
-      { name: 'Micro-Frontends', tag: 'FEDERATION', tagColor: 'text-on-surface-variant' },
-      { name: 'Zero-Trust Enclaves', tag: 'mTLS 1.3', tagColor: 'text-terminal-dim-green' },
-      { name: 'Twelve-Factor Native', tag: 'STATELESS', tagColor: 'text-cyber-cyan' },
-    ],
-  },
-];
 
 const polaroids = [
   {
-    imgSrc: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDnm4ZiSPlNskuP2PbE5yL0wVuNko8mq6Z1PyioxkJsynIvOTQBDtpsAlYfpQdf6f2ILC9_rYQGPkXMx0HcI-7k-UfaUbiXKZMHKwH6pzWeCKhB4rNFIbT89cbjzqSq6hccewxIu5zCsBmozhiWwE4OSEg-MOj9Kc66CyXF9LlhYlurYybm5ZstDtkaeeLObwOhCZfuvLSl94T9Ms4M6qbFm-DrbxubnQQ8Euc9TojkxR6-1Qhouv45',
-    imgAlt: 'Custom mechanical keyboard build with pastel keycaps',
+    imgSrc: '/about/music.webp',
+    imgAlt: 'Listening to music',
     badgeBg: 'bg-acid-yellow',
-    badgeText: 'HARDWARE OBSESSION',
-    title: 'CUSTOM KEYBOARDS',
-    desc: 'Lubed linear switches (Krytox 205g0), custom gasket-mounted polycarbonate plates, and programmed QMK/VIAL rotary dials with mini OLED system readouts. If typing doesn\'t sound like raindrops on marble, rewrite the board.',
-    footerLeft: 'SWITCH: GATERON OIL KING',
-    footerRight: '62g SPRING',
+    badgeText: 'AUDIO IMMERSION',
+    title: 'LISTENING TO MUSIC',
+    desc: 'Music is the primary fuel for deep work and relaxation. Always exploring new genres, curating playlists, and discovering sounds that match the energy of the day—whether it\'s lo-fi beats for coding or energetic tracks for a boost.',
+    footerLeft: 'CURRENT STATUS:',
+    footerRight: 'ON REPEAT',
     footerRightBg: 'bg-bubblegum-pink text-canvas-cream',
     rotate: '-rotate-1',
   },
   {
-    imgSrc: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAhVWRZXtoLbnhiBxW8f0M6U20z-_fw57bkGUTxYXhrryzP3wSiNkuEZOnwETnM2PcLNspuohDWSlVSNREh1Uz1nOIhEU_Zx9UGORSWPD4PAVqOYNg9gk8K83lrD3omJDP8NXo2LNdVm2vtZG5oBcFco2JNXuujczxqd5_WxhXq7KAHmX3_MfAjCMwoMSbu7Ck5tXxgS-JyrGe0N_NBQCTan2WEOsijCbnlU4y1E-C2wwCruOm8Sd8j',
-    imgAlt: 'Vinyl LP records and vintage Technics turntable',
+    imgSrc: '/about/movies.webp',
+    imgAlt: 'Watching movies',
     badgeBg: 'bg-bubblegum-pink',
-    badgeText: 'HEAVY ROTATION',
-    title: 'CITY POP & HYPERPOP',
-    desc: 'Deep appreciation for analog warm master pressings paired with blisteringly fast 160 BPM electronic synthesis. Heavy rotation includes Tatsuro Yamashita, Lamp, NewJeans, Charli XCX, and obscure Japanese cassette tapes from 1984.',
-    footerLeft: 'RPM: 33 ⅓ & 45',
-    footerRight: 'AUDIO ANALOG',
+    badgeText: 'CINEMATIC JOURNEYS',
+    title: 'WATCHING MOVIES',
+    desc: 'Passionate about storytelling through film. From blockbuster sci-fi epics to indie dramas, movies provide a great escape and a source of creative inspiration. Constantly analyzing cinematography and plot structures.',
+    footerLeft: 'GENRE PREFERENCE:',
+    footerRight: 'SCI-FI & THRILLER',
     footerRightBg: 'bg-electric-mint text-brutal-black',
     rotate: 'rotate-1',
   },
   {
-    imgSrc: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBgIPWYrNkkxFcACdm5WpsOua4xfF10bABmg5r52G6FpXJaAAYhROZvAJh3whDHi-t1ggG5i-4bMo22tKqFx6V_pT6TqEAZAvxlRbEkIIyhWPioL7WGzRawf4T9WpQRB1xcxOagnjpiDS5DGYJC-dL9PlZwblGW812JguSLAWYd8l6RA-FB_YFG3mNMnEOuuA5sJify7eDrhZZWbHwqxyIaD8iTmVUgDwrCDFcdqXAJQOeuTxv0kBGf',
-    imgAlt: 'Artisanal pour-over coffee setup and arcade rhythm controller',
+    imgSrc: '/about/games.webp',
+    imgAlt: 'Playing games',
     badgeBg: 'bg-cyber-cyan',
-    badgeText: 'KINETIC RITUALS',
-    title: 'COFFEE & RHYTHM SPEEDRUNS',
-    desc: 'Manual pour-over calibration dialed to 93°C with a 1:16.2 brew ratio for washed Yirgacheffe beans. When the IDE closes, reaction times are tested on arcade rhythm cabinets (Chunithm & SDVX) at 12.8 speed multipliers.',
-    footerLeft: 'TDS YIELD: 21.4%',
-    footerRight: 'MAX PERFECT',
+    badgeText: 'INTERACTIVE WORLDS',
+    title: 'PLAYING GAMES',
+    desc: 'Gaming is both a hobby and a way to study interactive design. Immersing in strategy games, RPGs, and fast-paced multiplayer arenas to unwind and appreciate complex game mechanics and world-building.',
+    footerLeft: 'PLATFORM:',
+    footerRight: 'PC & CONSOLE',
     footerRightBg: 'bg-acid-yellow text-brutal-black',
     rotate: '-rotate-1',
   },
@@ -204,10 +154,10 @@ export default function AboutContent() {
             </span>
           </div>
           <h1 className="font-display-lg text-display-lg-mobile lg:text-display-xl text-brutal-black uppercase tracking-tight leading-none drop-shadow-[4px_4px_0px_#FF5E97]">
-            PORTO_EMIR.EXE
+            EMIR MUHAMMAD AL-FARIQ
           </h1>
           <div className="inline-block self-start bg-brutal-black text-terminal-green px-space-md py-space-xs font-label-lg text-label-lg shadow-[4px_4px_0px_#00E5FF] -rotate-1">
-            ⚡ FULLSTACK ARCHITECT BY DAY // POP CULTURE &amp; CREATIVE ENGINEER BY NIGHT
+            ⚡ HE CAN BE FULLSTACK PROGRAMMER, IT BUSINESS ANALYST, SYSTEM ANALYST // HE CAN BE ANYTHING
           </div>
         </motion.div>
 
@@ -236,9 +186,9 @@ export default function AboutContent() {
               {/* TODO: Replace with actual photo — place WebP at /public/profile.webp */}
               <div className="relative overflow-hidden bg-brutal-black shadow-[4px_4px_0px_#0E0E12] mb-space-md aspect-[4/5]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img 
-                  src="/profile/profile.webp" 
-                  alt="Emir Muhammad Al Fariq" 
+                <img
+                  src="/profile/profile.webp"
+                  alt="Emir Muhammad Al Fariq"
                   className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500"
                 />
                 <div className="absolute top-3 right-3 bg-bubblegum-pink text-brutal-black px-space-sm py-1 font-label-sm text-label-sm shadow-[3px_3px_0px_#0E0E12] rotate-6">
@@ -342,8 +292,8 @@ export default function AboutContent() {
         <div className="flex whitespace-nowrap gap-space-xl font-label-lg text-label-lg tracking-widest font-bold animate-marquee">
           {['/// EVENT STREAMS', '/// DISTRIBUTED STATE MACHINES', '/// MICRO-FRONTEND COMPOSITION', '/// ZERO-TRUST ENCLAVES', '/// REACT 19 CONCURRENCY',
             '/// EVENT STREAMS', '/// DISTRIBUTED STATE MACHINES'].map((item, i) => (
-            <span key={i}>{item}</span>
-          ))}
+              <span key={i}>{item}</span>
+            ))}
         </div>
       </div>
 
@@ -387,7 +337,7 @@ export default function AboutContent() {
               </div>
               <div className="md:col-span-8 flex flex-col justify-between space-y-space-md">
                 <p className="font-body-md text-body-md text-on-surface leading-relaxed"
-                   dangerouslySetInnerHTML={{ __html: item.description.replace('400,000+', '<strong class="bg-acid-yellow text-brutal-black px-1">400,000+ real-time QPS</strong>') }}
+                  dangerouslySetInnerHTML={{ __html: item.description.replace('400,000+', '<strong class="bg-acid-yellow text-brutal-black px-1">400,000+ real-time QPS</strong>') }}
                 />
                 <div className="flex flex-wrap gap-space-xs pt-space-xs">
                   {item.tags.map((tag) => (
@@ -406,49 +356,7 @@ export default function AboutContent() {
       </section>
 
       {/* Tech Arsenal */}
-      <section className="w-full px-margin-mobile lg:px-margin py-space-xl bg-surface-container-low shadow-[inset_0_4px_0px_#0E0E12]">
-        <div className="mb-space-lg">
-          <div className="flex items-center gap-space-xs">
-            <span className="w-3 h-3 bg-cyber-cyan shadow-[1px_1px_0px_#0E0E12]" />
-            <span className="font-label-md text-label-md text-on-surface-variant uppercase">EQUIPMENT & STACK READOUT</span>
-          </div>
-          <h2 className="font-headline-lg text-headline-lg text-brutal-black uppercase tracking-tight">COMPLETE TECHNICAL ARSENAL</h2>
-          <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-1">
-            Zero hype-driven technology choices. Every token and service is battle-tested in high-throughput production environments.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
-          {techStack.map((stack, i) => (
-            <motion.div
-              key={stack.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.08 }}
-              className="bg-canvas-cream p-space-md shadow-[6px_6px_0px_#0E0E12] flex flex-col justify-between hover:translate-y-[-2px] transition-transform"
-            >
-              <div>
-                <div className="flex items-center justify-between pb-space-sm bg-surface-container px-space-xs py-1 shadow-[2px_2px_0px_#0E0E12] mb-space-md">
-                  <span className="font-label-md text-label-md text-brutal-black font-bold">{stack.id} // {stack.title}</span>
-                  <span className="material-symbols-outlined text-[18px]">{stack.icon}</span>
-                </div>
-                <p className="font-body-sm text-body-sm text-on-surface-variant mb-space-md">{stack.desc}</p>
-                <div className="space-y-space-xs">
-                  {stack.items.map((item) => (
-                    <div key={item.name} className="flex items-center justify-between p-space-xs bg-surface-container-lowest shadow-[2px_2px_0px_#0E0E12]">
-                      <span className="font-label-sm text-label-sm font-bold">{item.name}</span>
-                      <span className={`font-label-sm text-label-sm ${item.tagColor}`}>{item.tag}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className={`mt-space-md pt-space-xs ${stack.footerBg} p-1 text-center font-label-sm text-label-sm text-brutal-black font-bold shadow-[2px_2px_0px_#0E0E12]`}>
-                {stack.footerLabel}
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+      <SkillsSection />
 
       {/* Outside The Terminal — Polaroids */}
       <section className="w-full px-margin-mobile lg:px-margin py-space-xl">
@@ -481,6 +389,9 @@ export default function AboutContent() {
                     src={p.imgSrc}
                     alt={p.imgAlt}
                     className="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-300"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100"><rect width="100%" height="100%" fill="%230E0E12"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="%23FF5E97" font-family="monospace" font-size="8">TODO: Add Image</text></svg>';
+                    }}
                   />
                   <div className={`absolute top-2 left-2 ${p.badgeBg} text-brutal-black px-space-xs py-0.5 font-label-sm text-label-sm font-bold shadow-[2px_2px_0px_#0E0E12]`}>
                     {p.badgeText}

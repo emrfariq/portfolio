@@ -22,128 +22,111 @@ interface ProjectCard {
   href: string;
 }
 
-// TODO: Replace imgSrc with real WebP images from /public/projects
-// TODO: Replace href with real project/GitHub URLs
 const allProjects: ProjectCard[] = [
   {
-    id: 'cyberpunk-telemetry',
-    statusBadge: { text: 'ID: HUB_9000 // PROD', bg: 'bg-terminal-black text-terminal-green shadow-[2px_2px_0px_#00FF41]' },
-    statusRight: { text: '180K/SEC', bg: 'text-terminal-green bg-terminal-black px-2 py-0.5' },
-    title: 'CYBERPUNK TELEMETRY HUB',
-    desc: 'Real-time metric ingestion engine handling high-concurrency socket events with microsecond persistence pipelines and instant multi-node sync.',
-    imgSrc: '/projects/project-1.webp',
-    imgAlt: 'Cyberpunk terminal telemetry visualization',
-    imgOverlay: { text: 'LATENCY: 1.2ms // P99', bg: 'bg-brutal-black text-terminal-green' },
-    tags: ['RUST', 'WEBSOCKETS', 'TIMESCALE_DB', 'GRAFANA'],
+    id: 'public-transport-clustering',
+    statusBadge: { text: 'DATA ANALYTICS // RESEARCH', bg: 'bg-terminal-black text-terminal-green shadow-[2px_2px_0px_#00FF41]' },
+    statusRight: { text: 'BOGOR REGENCY', bg: 'text-terminal-green bg-terminal-black px-2 py-0.5' },
+    title: 'PUBLIC TRANSPORT CLUSTERING',
+    desc: 'Conducted a comprehensive data analytics research project to cluster public transportation data. Cleaned, processed, and analyzed complex datasets to provide data-driven insights.',
+    imgSrc: '/projects/public-transport-clustering.webp',
+    imgAlt: 'Public Transportation Data Clustering Analysis',
+    imgOverlay: { text: 'PYTHON // NUMPY', bg: 'bg-brutal-black text-terminal-green' },
+    tags: ['PYTHON', 'PANDAS', 'NUMPY'],
     ticketNo: '#001', ticketBg: 'bg-soft-lavender',
-    release: '2025.01',
+    release: '2024.01',
     runBg: 'bg-brutal-black', runText: 'text-terminal-green', runShadow: 'shadow-[2px_2px_0px_#00FF41]',
-    srcHover: 'hover:bg-acid-yellow', href: '#',
+    srcHover: 'hover:bg-acid-yellow', href: 'https://researchhub.id/index.php/jitek/article/view/8417',
   },
   {
-    id: 'neo-vapor-commerce',
-    statusBadge: { text: 'ECOMM_CORE // V3.2', bg: 'bg-bubblegum-pink text-brutal-black shadow-[2px_2px_0px_#0E0E12]' },
-    statusRight: { text: 'REDIS CLUSTER', bg: 'text-on-surface-variant bg-surface-container px-2 py-0.5' },
-    title: 'NEO-VAPOR COMMERCE',
-    desc: 'Distributed checkout surge engine with zero double-spends and distributed locks over Redis cluster. Handles 10k items/second drops.',
-    imgSrc: '/projects/project-2.webp',
-    imgAlt: 'Vaporwave 3D streetwear checkout interface',
-    imgOverlay: { text: 'SURGE RESISTANT: 100K RPS', bg: 'bg-acid-yellow text-brutal-black font-bold' },
-    tags: ['NEXT.JS 15', 'POSTGRESQL', 'REDIS_REDLOCK', 'STRIPE_V3'],
+    id: 'member-management',
+    statusBadge: { text: 'FULLSTACK // RBAC', bg: 'bg-bubblegum-pink text-brutal-black shadow-[2px_2px_0px_#0E0E12]' },
+    statusRight: { text: 'REACT + VITE', bg: 'text-on-surface-variant bg-surface-container px-2 py-0.5' },
+    title: 'MEMBER MANAGEMENT SYSTEM',
+    desc: 'Scalable web application featuring multi-tier Role-Based Access Control and advanced hierarchical data filtering across national, provincial, municipal, and district levels.',
+    imgSrc: '/projects/member-management-system.webp',
+    imgAlt: 'Member Management System Interface',
+    imgOverlay: { text: 'HIERARCHICAL FILTERING', bg: 'bg-acid-yellow text-brutal-black font-bold' },
+    tags: ['REACT', 'TYPESCRIPT', 'TAILWIND', 'TANSTACK QUERY', 'ZUSTAND'],
     ticketNo: '#002', ticketBg: 'bg-electric-mint',
-    release: '2024.11',
+    release: '2024.02',
     runBg: 'bg-brutal-black', runText: 'text-electric-mint', runShadow: 'shadow-[2px_2px_0px_#00F5A0]',
     srcHover: 'hover:bg-soft-lavender', href: '#',
   },
   {
-    id: 'synth-soundscape-ai',
-    statusBadge: { text: 'DSP // AUDIO_LAB', bg: 'bg-cyber-cyan text-brutal-black shadow-[2px_2px_0px_#0E0E12]' },
-    statusRight: { text: 'WEBRTC_MESH', bg: 'text-on-surface-variant bg-surface-container px-2 py-0.5' },
-    title: 'SYNTH SOUNDSCAPE AI',
-    desc: 'Browser-native neural audio synthesis with multi-user cursor resonance. Generates algorithmic ambient sound fields through mouse coordinate telemetry.',
-    imgSrc: '/projects/project-3.webp',
-    imgAlt: 'Audio DSP frequency synthesizer visualization',
-    imgOverlay: { text: 'SAMPLE: 96KHZ / 32BIT FLOAT', bg: 'bg-brutal-black text-cyber-cyan' },
-    tags: ['PYTHON', 'WEBAUDIO_API', 'WEBRTC', 'TENSORFLOW_JS'],
+    id: 'mansafara',
+    statusBadge: { text: 'FRONTEND // COMPANY_PROFILE', bg: 'bg-cyber-cyan text-brutal-black shadow-[2px_2px_0px_#0E0E12]' },
+    statusRight: { text: 'RESPONSIVE', bg: 'text-on-surface-variant bg-surface-container px-2 py-0.5' },
+    title: 'MANSAFARA',
+    desc: 'Modern and responsive company profile website to effectively showcase business information, portfolio, and professional services.',
+    imgSrc: '/projects/mansafara.webp',
+    imgAlt: 'Mansafara Company Profile',
+    imgOverlay: { text: 'UI/UX OPTIMIZED', bg: 'bg-brutal-black text-cyber-cyan' },
+    tags: ['REACT', 'JAVASCRIPT', 'TAILWIND CSS'],
     ticketNo: '#003', ticketBg: 'bg-acid-yellow',
-    release: '2024.08',
-    runBg: 'bg-brutal-black', runText: 'text-acid-yellow', runShadow: 'shadow-[2px_2px_0px_#FFE600]',
-    srcHover: 'hover:bg-bubblegum-pink', href: '#',
-  },
-  {
-    id: 'chaos-monkey',
-    statusBadge: { text: 'INFRA // RESILIENCE', bg: 'bg-error text-on-error shadow-[2px_2px_0px_#0E0E12]' },
-    statusRight: { text: 'K8S CRD', bg: 'text-terminal-green bg-brutal-black px-2 py-0.5' },
-    title: 'CHAOS MONKEY ORCHESTRATOR',
-    desc: 'Automated Kubernetes pod assassination framework with real-time cluster health topology, simulated network partitions, and auto-remediation audits.',
-    imgSrc: '/projects/project-4.webp',
-    imgAlt: 'Kubernetes cluster topology with chaos indicators',
-    imgOverlay: { text: 'PODS TERMINATED: 48,204', bg: 'bg-error text-on-error' },
-    tags: ['GO (GOLANG)', 'CLIENT-GO', 'GRPC', 'DOCKER'],
-    ticketNo: '#004', ticketBg: 'bg-primary-fixed',
-    release: '2024.06',
-    runBg: 'bg-brutal-black', runText: 'text-bubblegum-pink', runShadow: 'shadow-[2px_2px_0px_#FF5E97]',
-    srcHover: 'hover:bg-electric-mint', href: '#',
-  },
-  {
-    id: 'chroma-gl',
-    statusBadge: { text: 'GRAPHICS // SHADER_AST', bg: 'bg-soft-lavender text-brutal-black shadow-[2px_2px_0px_#0E0E12]' },
-    statusRight: { text: '60 FPS LOCKED', bg: 'text-on-surface-variant bg-surface-container px-2 py-0.5' },
-    title: 'CHROMA_GL: SHADER CANVAS',
-    desc: 'WebGL 2.0 raymarched Signed Distance Fields playground with live AST tokenization parser and reactive microphone FFT input integration.',
-    imgSrc: '/projects/project-5.webp',
-    imgAlt: 'Raymarched geometric fractal forms with chromatic aberration',
-    imgOverlay: { text: 'RENDER: 120 DRAW CALLS', bg: 'bg-brutal-black text-terminal-green' },
-    tags: ['WEBGL 2.0', 'GLSL', 'THREE.JS', 'TYPESCRIPT'],
-    ticketNo: '#005', ticketBg: 'bg-cyber-cyan',
     release: '2024.03',
-    runBg: 'bg-brutal-black', runText: 'text-cyber-cyan', runShadow: 'shadow-[2px_2px_0px_#00E5FF]',
-    srcHover: 'hover:bg-acid-yellow', href: '#',
-  },
-  {
-    id: 'hyper-ledger',
-    statusBadge: { text: 'CRYPTO // ROLLUP_ZK', bg: 'bg-terminal-dim-green text-on-primary shadow-[2px_2px_0px_#0E0E12]' },
-    statusRight: { text: '<50MS VALIDATION', bg: 'text-on-surface-variant bg-surface-container px-2 py-0.5' },
-    title: 'HYPER-LEDGER WALLET DAEMON',
-    desc: 'Sub-50ms cryptographic signature validator for EVM layer-2 state rollups with batch proof aggregation and gas fee forecasting.',
-    imgSrc: '/projects/project-6.webp',
-    imgAlt: 'Zero-knowledge cryptographic network map',
-    imgOverlay: { text: 'ZERO-KNOWLEDGE BATCH: 2048 TX', bg: 'bg-terminal-black text-terminal-green' },
-    tags: ['SOLIDITY', 'RUST', 'ACTIX-WEB', 'ZK-SNARKS'],
-    ticketNo: '#006', ticketBg: 'bg-canvas-cream',
-    release: '2024.01',
-    runBg: 'bg-brutal-black', runText: 'text-terminal-green', runShadow: 'shadow-[2px_2px_0px_#00FF41]',
-    srcHover: 'hover:bg-soft-lavender', href: '#',
-  },
-  {
-    id: 'neural-subtitler',
-    statusBadge: { text: 'EDGE // WASM_AI', bg: 'bg-bubblegum-pink text-brutal-black shadow-[2px_2px_0px_#0E0E12]' },
-    statusRight: { text: 'LOCAL ZERO-CLOUD', bg: 'text-on-surface-variant bg-surface-container px-2 py-0.5' },
-    title: 'NEURAL SUBTITLER REALTIME',
-    desc: 'Edge WASM pipeline transcribing low-latency voice streams with custom phoneme alignment and offline word boundary extraction.',
-    imgSrc: '/projects/project-7.webp',
-    imgAlt: 'Microphone waveform with speech recognition text',
-    imgOverlay: { text: 'INFERENCE: 38MS / CHUNK', bg: 'bg-acid-yellow text-brutal-black font-bold' },
-    tags: ['RUST', 'WEB_WORKERS', 'WASM_BINDGEN', 'WHISPER_TINY'],
-    ticketNo: '#007', ticketBg: 'bg-soft-lavender',
-    release: '2023.10',
-    runBg: 'bg-brutal-black', runText: 'text-bubblegum-pink', runShadow: 'shadow-[2px_2px_0px_#FF5E97]',
-    srcHover: 'hover:bg-electric-mint', href: '#',
-  },
-  {
-    id: 'kawaii-cluster',
-    statusBadge: { text: 'SYSTEMS // DESKTOP_GUI', bg: 'bg-electric-mint text-brutal-black shadow-[2px_2px_0px_#0E0E12]' },
-    statusRight: { text: 'PROMETHEUS SYNC', bg: 'text-on-surface-variant bg-surface-container px-2 py-0.5' },
-    title: 'KAWAII CLUSTER MONITOR',
-    desc: 'Desktop Menubar utility translating live Prometheus cluster health into Tamagotchi-style virtual pet moods and animated behavioral states.',
-    imgSrc: '/projects/project-8.webp',
-    imgAlt: 'Retro 8-bit virtual pet cluster monitor dashboard',
-    imgOverlay: { text: 'PET MOOD: HAPPY (HEALTH 99%)', bg: 'bg-brutal-black text-electric-mint' },
-    tags: ['TAURI', 'SVELTE 5', 'PROMETHEUS', 'RUST'],
-    ticketNo: '#008', ticketBg: 'bg-acid-yellow',
-    release: '2023.07',
     runBg: 'bg-brutal-black', runText: 'text-acid-yellow', runShadow: 'shadow-[2px_2px_0px_#FFE600]',
-    srcHover: 'hover:bg-bubblegum-pink', href: '#',
+    srcHover: 'hover:bg-bubblegum-pink', href: 'http://mansafara.id',
+  },
+  {
+    id: 'english-everywhere',
+    statusBadge: { text: 'FULLSTACK // EDUTECH', bg: 'bg-error text-on-error shadow-[2px_2px_0px_#0E0E12]' },
+    statusRight: { text: 'NEXT.JS', bg: 'text-terminal-green bg-brutal-black px-2 py-0.5' },
+    title: 'ENGLISH EVERYWHERE',
+    desc: 'Responsive web-based platform designed to present educational content, class schedules, and interactive learning materials through an accessible UI.',
+    imgSrc: '/projects/english-everywhere.webp',
+    imgAlt: 'English Everywhere Educational Platform',
+    imgOverlay: { text: 'SUPABASE INTEGRATED', bg: 'bg-error text-on-error' },
+    tags: ['NEXT.JS', 'TYPESCRIPT', 'NODE.JS', 'EXPRESS.JS', 'SUPABASE'],
+    ticketNo: '#004', ticketBg: 'bg-primary-fixed',
+    release: '2024.04',
+    runBg: 'bg-brutal-black', runText: 'text-bubblegum-pink', runShadow: 'shadow-[2px_2px_0px_#FF5E97]',
+    srcHover: 'hover:bg-electric-mint', href: 'http://englisheverywhere.id',
+  },
+  {
+    id: 'angkasa-laundry',
+    statusBadge: { text: 'CMS // B2B', bg: 'bg-soft-lavender text-brutal-black shadow-[2px_2px_0px_#0E0E12]' },
+    statusRight: { text: 'WORDPRESS', bg: 'text-on-surface-variant bg-surface-container px-2 py-0.5' },
+    title: 'ANGKASA MESIN LAUNDRY',
+    desc: 'Business website to effectively display laundry machine products and company information for prospective B2B clients.',
+    imgSrc: '/projects/angkasa-mesin-laundry.webp',
+    imgAlt: 'Angkasa Mesin Laundry Store',
+    imgOverlay: { text: 'SEO OPTIMIZED', bg: 'bg-brutal-black text-terminal-green' },
+    tags: ['WORDPRESS', 'YOAST SEO', 'B2B_COMMERCE'],
+    ticketNo: '#005', ticketBg: 'bg-cyber-cyan',
+    release: '2024.05',
+    runBg: 'bg-brutal-black', runText: 'text-cyber-cyan', runShadow: 'shadow-[2px_2px_0px_#00E5FF]',
+    srcHover: 'hover:bg-acid-yellow', href: 'http://angkasamesinlaundrystore.com',
+  },
+  {
+    id: 'makeover-laundry',
+    statusBadge: { text: 'CMS // BUSINESS_OPS', bg: 'bg-terminal-dim-green text-on-primary shadow-[2px_2px_0px_#0E0E12]' },
+    statusRight: { text: 'DIGITAL VISIBILITY', bg: 'text-on-surface-variant bg-surface-container px-2 py-0.5' },
+    title: 'MAKEOVER LAUNDRY ID',
+    desc: 'Responsive business website designed to support laundry service operations, providing service details and improving digital visibility.',
+    imgSrc: '/projects/makeover-laundry.webp',
+    imgAlt: 'Makeover Laundry Indonesia',
+    imgOverlay: { text: 'SERVICE SHOWCASE', bg: 'bg-terminal-black text-terminal-green' },
+    tags: ['WORDPRESS', 'YOAST SEO'],
+    ticketNo: '#006', ticketBg: 'bg-canvas-cream',
+    release: '2024.06',
+    runBg: 'bg-brutal-black', runText: 'text-terminal-green', runShadow: 'shadow-[2px_2px_0px_#00FF41]',
+    srcHover: 'hover:bg-soft-lavender', href: 'http://makeoverlaundryindonesia.com',
+  },
+  {
+    id: 'senyawa-living',
+    statusBadge: { text: 'CMS // PORTFOLIO', bg: 'bg-bubblegum-pink text-brutal-black shadow-[2px_2px_0px_#0E0E12]' },
+    statusRight: { text: 'BRAND SHOWCASE', bg: 'text-on-surface-variant bg-surface-container px-2 py-0.5' },
+    title: 'SENYAWA LIVING',
+    desc: 'Professional website to showcase the brand\'s portfolio, utilizing a CMS for seamless content updates and management.',
+    imgSrc: '/projects/senyawa-living.webp',
+    imgAlt: 'Senyawa Living',
+    imgOverlay: { text: 'DYNAMIC CONTENT', bg: 'bg-acid-yellow text-brutal-black font-bold' },
+    tags: ['WORDPRESS', 'YOAST SEO'],
+    ticketNo: '#007', ticketBg: 'bg-soft-lavender',
+    release: '2024.07',
+    runBg: 'bg-brutal-black', runText: 'text-bubblegum-pink', runShadow: 'shadow-[2px_2px_0px_#FF5E97]',
+    srcHover: 'hover:bg-electric-mint', href: 'http://senyawaliving.com',
   },
 ];
 
@@ -234,10 +217,10 @@ function ProjectTicketCard({ project, index }: { project: ProjectCard; index: nu
 }
 
 const marqueeItems = [
-  '■ INDEXING 24 PRODUCTION RUNTIMES',
-  '■ 99.98% P99 INGEST LATENCY',
-  '■ K8S READY // ZERO-DEPENDENCY WASM ENGINES',
-  '■ GLSL RAYMARCH LAB ONLINE',
+  '■ INDEXING 7 PRODUCTION RUNTIMES',
+  '■ FULLSTACK // WEB // DATA ANALYTICS',
+  '■ HIGH-PERFORMANCE REACT & NEXT.JS APPS',
+  '■ SEAMLESS CMS INTEGRATIONS',
 ];
 
 export default function ProjectsContent() {
@@ -279,14 +262,14 @@ export default function ProjectsContent() {
               <span className="material-symbols-outlined text-primary text-2xl">memory</span>
               <div>
                 <span className="font-label-sm text-label-sm text-on-surface-variant block">TOTAL COMPUTES</span>
-                <span className="font-label-lg text-label-lg text-brutal-black">24 SHIPPED REPOS</span>
+                <span className="font-label-lg text-label-lg text-brutal-black">7 SHIPPED REPOS</span>
               </div>
             </div>
           </div>
 
           <div className="bg-surface-container p-space-md shadow-[4px_4px_0px_#0E0E12]">
             <p className="font-body-md text-body-md text-on-surface uppercase tracking-wide">
-              <span className="font-bold text-primary">// QUERY RESULT:</span> 24 ENTRIES FOUND. HARDCORE DISTRIBUTED ARCHITECTURES, AUDIO DSP, WEBGL SHADERS &amp; BOOTLEG EXPERIMENTS. ZERO ARTIFICIAL FLUFF.
+              <span className="font-bold text-primary">// QUERY RESULT:</span> 7 ENTRIES FOUND. MODERN WEB ARCHITECTURES, DATA ANALYTICS, AND SEAMLESS CONTENT SYSTEMS. ZERO ARTIFICIAL FLUFF.
             </p>
           </div>
         </motion.header>
@@ -314,7 +297,7 @@ export default function ProjectsContent() {
               <span className="material-symbols-outlined text-brutal-black">arrow_back</span>
             </button>
             <span className="font-label-lg text-label-lg text-brutal-black bg-surface-container px-4 py-2 shadow-[3px_3px_0px_#0E0E12]">
-              PAGE [ 01 ] OF 03
+              PAGE [ 01 ] OF 01
             </span>
             <button
               id="projects-next-page"
@@ -325,7 +308,7 @@ export default function ProjectsContent() {
             </button>
           </div>
           <div className="font-label-sm text-label-sm text-on-surface-variant">
-            SHOWING 8 OF 24 TOTAL REPOSITORIES
+            SHOWING 7 OF 7 TOTAL REPOSITORIES
           </div>
         </motion.div>
       </div>
