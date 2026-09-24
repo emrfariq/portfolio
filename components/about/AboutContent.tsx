@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import SkillsSection from '@/components/home/SkillsSection';
+import Image from 'next/image';
 
 const glitchTicker = [
   '/// SECURITY LEVEL: VIP CLEARANCE 04',
@@ -185,11 +186,12 @@ export default function AboutContent() {
               {/* Developer Photo */}
               {/* TODO: Replace with actual photo — place WebP at /public/profile.webp */}
               <div className="relative overflow-hidden bg-brutal-black shadow-[4px_4px_0px_#0E0E12] mb-space-md aspect-[4/5]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src="/profile/profile.webp"
                   alt="Emir Muhammad Al Fariq"
-                  className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover filter grayscale hover:grayscale-0 transition-all duration-500"
                 />
                 <div className="absolute top-3 right-3 bg-bubblegum-pink text-brutal-black px-space-sm py-1 font-label-sm text-label-sm shadow-[3px_3px_0px_#0E0E12] rotate-6">
                   ★ NON-SYNTHETIC
@@ -384,14 +386,12 @@ export default function AboutContent() {
             >
               <div>
                 <div className="relative bg-brutal-black mb-space-md aspect-[4/3] overflow-hidden shadow-[3px_3px_0px_#0E0E12]">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     src={p.imgSrc}
                     alt={p.imgAlt}
-                    className="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-300"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100"><rect width="100%" height="100%" fill="%230E0E12"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="%23FF5E97" font-family="monospace" font-size="8">TODO: Add Image</text></svg>';
-                    }}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-300"
                   />
                   <div className={`absolute top-2 left-2 ${p.badgeBg} text-brutal-black px-space-xs py-0.5 font-label-sm text-label-sm font-bold shadow-[2px_2px_0px_#0E0E12]`}>
                     {p.badgeText}

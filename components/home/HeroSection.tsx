@@ -1,10 +1,9 @@
 'use client';
 
-import { Suspense, lazy } from 'react';
+import { Suspense } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
-const RetroTV = lazy(() => import('./RetroTV'));
+import RetroTV from './RetroTV';
 
 const statusBadges = [
   { text: 'PORT_8080::ONLINE', bg: 'bg-brutal-black', textColor: 'text-terminal-green', shadow: 'shadow-[3px_3px_0px_#FF5E97]', rotate: '-rotate-[1deg]', dot: true },

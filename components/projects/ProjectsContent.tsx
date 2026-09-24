@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 interface ProjectCard {
@@ -155,14 +156,12 @@ function ProjectTicketCard({ project, index }: { project: ProjectCard; index: nu
         </div>
 
         <div className="relative w-full h-40 bg-surface-container overflow-hidden shadow-[2px_2px_0px_#0E0E12]">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img 
+          <Image 
             src={project.imgSrc} 
             alt={project.imgAlt} 
-            className="w-full h-full object-cover" 
-            onError={(e) => {
-              (e.target as HTMLImageElement).src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100"><rect width="100%" height="100%" fill="%230E0E12"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="%23FF5E97" font-family="monospace" font-size="8">TODO: Add Image</text></svg>';
-            }}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover" 
           />
           <div className={`absolute bottom-2 left-2 px-2 py-0.5 font-label-sm text-label-sm ${project.imgOverlay.bg}`}>
             {project.imgOverlay.text}
