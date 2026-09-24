@@ -31,7 +31,7 @@ export default function Header() {
               href="/"
               className="flex items-center gap-space-xs bg-brutal-black text-terminal-green px-space-md py-space-xs shadow-[3px_3px_0px_#FF5E97] transition-transform active:translate-x-0.5 active:translate-y-0.5"
             >
-              <span className="material-symbols-outlined text-terminal-green text-[18px]">terminal</span>
+              <span className="material-symbols-outlined text-terminal-green text-[18px]">bolt</span>
               <span className="font-label-lg text-label-lg tracking-wider">PORTO_EMIR.EXE</span>
             </Link>
 

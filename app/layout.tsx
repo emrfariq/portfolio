@@ -29,6 +29,9 @@ export const metadata: Metadata = {
     description: 'Building scalable distributed systems and unapologetic pop experiences.',
     type: 'website',
   },
+  icons: {
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300E5FF'><path d='M11 21h-1l1-7H7.5c-.8 0-.8-.5-.5-.9L13 3h1l-1 7h3.5c.8 0 .8.5.5.9L11 21z'/></svg>",
+  },
 };
 
 export default function RootLayout({
