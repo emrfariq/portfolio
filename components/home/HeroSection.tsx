@@ -20,7 +20,7 @@ const systemStats = [
 
 export default function HeroSection() {
   return (
-    <section className="relative z-10 w-full px-margin-mobile lg:px-margin pt-8 pb-space-lg flex flex-col items-center justify-center text-center">
+    <section className="relative z-10 w-full px-margin-mobile lg:px-margin pt-8 pb-space-lg flex flex-col items-center justify-center text-center min-h-[calc(100vh-80px)]">
       {/* Ambient dot grid */}
       <div className="absolute inset-0 pointer-events-none opacity-40 z-0 ambient-grid" />
 
@@ -52,7 +52,7 @@ export default function HeroSection() {
         className="max-w-4xl mx-auto mb-space-sm relative z-10"
       >
         <p className="font-label-md text-label-md text-brutal-black uppercase tracking-wider bg-canvas-cream px-space-md py-space-xs inline-block shadow-[4px_4px_0px_#0E0E12]">
-          FULLSTACK ARCHITECT &amp; CHAOS ENGINEER // BRIDGING SCALABLE DISTRIBUTED SYSTEMS &amp; POP EXPERIENCES
+          FULLSTACK ARCHITECT &amp; CHAOS ENGINEER // BRIDGING SCALABLE DISTRIBUTED SYSTEMS
         </p>
       </motion.div>
 
